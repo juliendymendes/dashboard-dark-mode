@@ -1,58 +1,35 @@
-<script setup lang="ts">
-
-</script>
-
 <template>
 	<header>
-		<h1>Social Media Dashboard</h1>
-
-		<span>Total Followers: 23,004</span>
-
-		<span>Dark mode</span>
-		<button>On/Off</button>
+		<Header/>
 	</header>
 
 	<main>
-		<section>
-			<div>
-				<div>
-					<img src="..." alt="Facebook icon">
-					<span>@nathanf</span>
-				</div>
+		<SocialMediaCardsContainer/>
+		<OverviewCardsContainer/>
 	
-				<div>
-					1987 followers
-				</div>
-	
-				<div>
-					<img src="..." alt="Up arrow">
-					<span>12 Today</span>
-				</div>
-			</div>
-
-		</section>
-
-		<section>
-			<h2>Overview - Today</h2>
-
-			<div>
-				<div>
-					<span>Page views</span>
-					<img src="..." alt="Facebook icon">
-				</div>
-
-				<p>87</p>
-				<div>
-					<img src="..." alt="Up arrow">
-					<span>3%</span>
-				</div>
-			</div>
-		</section>
 	</main>
 
 	
 </template>
 
-<style scoped>
+<script setup lang="ts">
+import Header from './components/Header.vue';
+import OverviewCard from './components/OverviewCard.vue';
+import OverviewCardsContainer from './components/OverviewCardsContainer.vue';
+import SocialMediaCardsContainer from './components/SocialMediaCardsContainer.vue'
 
+</script>
+
+<style>
+@import '/public/bootstrap.min.css';
+
+@font-face{
+	font-family: 'Inter-Regular';
+	src: url('/fonts/Inter-Regular.ttf');
+}
+
+@font-face{
+	font-family: 'Inter-Bold';
+	src: url('/fonts/Inter-Bold.ttf');
+}
 </style>
