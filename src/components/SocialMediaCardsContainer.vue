@@ -2,18 +2,36 @@
 	
 	<section class="cards-container">
 		
-			<SocialMediaCard/>
-			<SocialMediaCard/>
-			<SocialMediaCard/>
-			<SocialMediaCard/>
+			<SocialMediaCard 
+				socialMedia="facebook" 
+				user="@nathanf" 
+				:numFollowers="1987" 
+				:numFollowersToday="12" 
+				:lostFollowers="false"/>
+			<SocialMediaCard 
+				socialMedia="twitter" 
+				user="@nathanf" 
+				:numFollowers="1044" 
+				:numFollowersToday="99" 
+				:lostFollowers="false"/>
+			<SocialMediaCard 
+				socialMedia="instagram" 
+				user="@realnathanf" 
+				:numFollowers="11000" 
+				:numFollowersToday="1099" 
+				:lostFollowers="false"/>
+			<SocialMediaCard 
+				socialMedia="youtube" 
+				user="Nathan F." 
+				:numFollowers="8239" 
+				:numFollowersToday="144" 
+				:lostFollowers="true"/>
 		
 	</section>
 </template>
 
 <script setup lang="ts">
 import SocialMediaCard from './SocialMediaCard.vue';
-
-
 
 </script>
 
