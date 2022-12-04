@@ -103,7 +103,7 @@ onMounted(() => {
 }
 .bottom > p{
 	font-size: 2rem;
-	color: #000;
+	color: hsl(230, 17%, 14%);
 	margin-bottom: 0;
 }
 

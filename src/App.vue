@@ -14,7 +14,6 @@
 
 <script setup lang="ts">
 import Header from './components/Header.vue';
-import OverviewCard from './components/OverviewCard.vue';
 import OverviewCardsContainer from './components/OverviewCardsContainer.vue';
 import SocialMediaCardsContainer from './components/SocialMediaCardsContainer.vue'
 

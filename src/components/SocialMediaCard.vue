@@ -110,7 +110,7 @@ onMounted(() => {
 
 .num-followers-container :first-child{
 	font-size: 3.7rem;
-	color: #000;
+	color: hsl(230, 17%, 14%);
 }
 
 .num-followers-container :last-child{
