@@ -1,13 +1,13 @@
 <template>
 
-	<div class="card-container">
+	<div class="card-container" :class="{'dark-mode-card-background': store.isDarkModeActive}">
 		<div class="top">
 			<span>{{contentType}}</span>
 			<img :src="cardConfigs.icon" alt="{{socialMedia}} icon">
 		</div>
 
 		<div class="bottom">
-			<p>{{data}}</p>
+			<p :class="{'dark-mode-dark-text' : store.isDarkModeActive}">{{data}}</p>
 			<div>
 				<img src="../../public/icon-up.svg" alt="Up arrow" v-if="!lost">
 				<img src="../../public/icon-down.svg" alt="Up arrow" v-else>
@@ -19,6 +19,9 @@
 
 <script setup lang="ts">
 import { defineProps, onMounted, ref } from 'vue';
+import { useDarkModeStore } from '@/stores/darkmode';
+
+const store = useDarkModeStore()
 
 const props = defineProps<{
 	socialMedia: string,

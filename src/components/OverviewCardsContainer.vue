@@ -1,6 +1,6 @@
 <template>
 	<section class="content">
-		<h2>Overview - Today</h2>
+		<h2 :class="{'dark-mode-dark-text': store.isDarkModeActive}">Overview - Today</h2>
 		<div class="cards-container">
 			
 				<OverviewCard
@@ -71,6 +71,9 @@
 
 <script setup lang="ts">
 import OverviewCard from './OverviewCard.vue';
+import { useDarkModeStore } from '@/stores/darkmode';
+
+const store = useDarkModeStore()
 </script>
 
 <style scoped>

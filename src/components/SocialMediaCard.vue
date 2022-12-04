@@ -1,13 +1,14 @@
 <template>
 	
-	<div class="card-container" :class="cardConfigs.topBorderColor">
+	<div class="card-container" :class="cardConfigs.topBorderColor,{'dark-mode-card-background' : store.isDarkModeActive}" 
+	 >
 		<div class="user-container">
 			<img :src="cardConfigs.icon" >
 			<span>{{user}}</span>
 		</div>
 
 		<div class="num-followers-container">
-			<span>{{numFollowers}}</span>
+			<span :class="{'dark-mode-dark-text' : store.isDarkModeActive}">{{numFollowers}}</span>
 		
 			<span>{{cardConfigs.followersOrSubscribers}}</span>
 		</div>
@@ -22,6 +23,9 @@
 
 <script setup lang="ts">
 import { defineProps, onMounted, ref } from 'vue';
+import { useDarkModeStore } from '@/stores/darkmode';
+
+const store = useDarkModeStore()
 
 const props = defineProps<{
 	socialMedia: string,

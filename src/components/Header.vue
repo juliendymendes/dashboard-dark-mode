@@ -1,6 +1,6 @@
 <template>
 	<div class="header-content">
-		<h1>Social Media Dashboard</h1>
+		<h1 :class="{'dark-mode-dark-text' : store.isDarkModeActive}">Social Media Dashboard</h1>
 
 		<div class="grid-container">
 		
@@ -14,8 +14,8 @@
 
 <script setup lang="ts">
 import DarkModeButton from './DarkModeButton.vue';
-
-
+import { useDarkModeStore } from '@/stores/darkmode';
+const store = useDarkModeStore()
 </script>
 
 <style scoped>

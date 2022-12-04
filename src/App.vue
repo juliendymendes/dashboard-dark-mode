@@ -1,13 +1,15 @@
-<template>
-	<header>
-		<Header/>
-	</header>
-
-	<main>
-		<SocialMediaCardsContainer/>
-		<OverviewCardsContainer/>
+<template >
+	<div :class="{'dark-mode-app-background' : store.isDarkModeActive}">
+		<header>
+			<Header/>
+		</header>
 	
-	</main>
+		<main>
+			<SocialMediaCardsContainer/>
+			<OverviewCardsContainer/>
+		
+		</main>
+	</div>
 
 	
 </template>
@@ -16,6 +18,21 @@
 import Header from './components/Header.vue';
 import OverviewCardsContainer from './components/OverviewCardsContainer.vue';
 import SocialMediaCardsContainer from './components/SocialMediaCardsContainer.vue'
+import { useDarkModeStore } from '@/stores/darkmode';
+import { onMounted } from 'vue';
+
+const store = useDarkModeStore()
+
+onMounted(() => {
+	if(localStorage.getItem('isDarkModeActive') === 'true'){
+		store.isDarkModeActive = true
+		document.documentElement.setAttribute('style', 'background-color: hsl(230, 17%, 14%);')
+	
+	}else{
+		store.isDarkModeActive = false
+	}
+
+})
 
 </script>
 
@@ -30,5 +47,23 @@ import SocialMediaCardsContainer from './components/SocialMediaCardsContainer.vu
 @font-face{
 	font-family: 'Inter-Bold';
 	src: url('/fonts/Inter-Bold.ttf');
+}
+
+.dark-mode-app-background{
+	background-color: hsl(230, 17%, 14%) ;
+}
+.dark-mode-card-background{
+	background-color: hsl(228, 28%, 20%)!important;
+}
+
+.dark-mode-card-background:hover{
+	background-color: hsl(228, 26%, 23%)!important;
+}
+.dark-mode-light-text{
+	color: hsl(228, 34%, 66%);
+}
+
+.dark-mode-dark-text{
+	color: hsl(0, 0%, 100%)!important;
 }
 </style>
