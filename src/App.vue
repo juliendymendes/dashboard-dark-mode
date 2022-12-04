@@ -1,23 +1,13 @@
 <template >
 	<div :class="{'dark-mode-app-background' : store.isDarkModeActive}">
-		<header>
-			<Header/>
-		</header>
-	
-		<main>
-			<SocialMediaCardsContainer/>
-			<OverviewCardsContainer/>
-		
-		</main>
+		<RouterView/>
 	</div>
 
 	
 </template>
 
 <script setup lang="ts">
-import Header from './components/Header.vue';
-import OverviewCardsContainer from './components/OverviewCardsContainer.vue';
-import SocialMediaCardsContainer from './components/SocialMediaCardsContainer.vue'
+
 import { useDarkModeStore } from '@/stores/darkmode';
 import { onMounted } from 'vue';
 
