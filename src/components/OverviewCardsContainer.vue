@@ -76,6 +76,7 @@ import OverviewCard from './OverviewCard.vue';
 <style scoped>
 .content{
 	margin: 3rem 3rem;
+	display: grid;
 }
 
 .content h2{
@@ -91,10 +92,18 @@ import OverviewCard from './OverviewCard.vue';
 }
 
 
-@media (max-width: 767.98px) { 
+@media (max-width: 768px) { 
+	.content{
+		margin: 3rem 1rem;
+		display: grid;
+	}
+	.content h2{
+		font-size: 1.3rem;
+	}
 	.cards-container{
-		grid-template-columns: 1fr ;
+		grid-template-columns: 1fr;
 	}
 }
+
 
 </style>

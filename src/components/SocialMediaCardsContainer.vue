@@ -44,10 +44,22 @@ import SocialMediaCard from './SocialMediaCard.vue';
 }
 
 
+@media (max-width: 976px) { 
+	.cards-container{
+		grid-template-columns: 1fr 1fr;
+	}
+}
 @media (max-width: 767.98px) { 
 	.cards-container{
 		grid-template-columns: 1fr ;
 	}
 }
+
+@media(max-width: 478px){
+	.cards-container{
+		margin: 3rem 1rem;
+	}
+}
+
 
 </style>
