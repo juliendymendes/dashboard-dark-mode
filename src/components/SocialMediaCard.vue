@@ -26,7 +26,7 @@ import { defineProps, onMounted, ref } from 'vue';
 const props = defineProps<{
 	socialMedia: string,
 	user: string,
-	numFollowers: number,
+	numFollowers: string,
 	numFollowersToday: number,
 	lostFollowers: boolean
 }>()

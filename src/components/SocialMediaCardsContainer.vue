@@ -5,25 +5,25 @@
 			<SocialMediaCard 
 				socialMedia="facebook" 
 				user="@nathanf" 
-				:numFollowers="1987" 
+				numFollowers="1987" 
 				:numFollowersToday="12" 
 				:lostFollowers="false"/>
 			<SocialMediaCard 
 				socialMedia="twitter" 
 				user="@nathanf" 
-				:numFollowers="1044" 
+				numFollowers="1044" 
 				:numFollowersToday="99" 
 				:lostFollowers="false"/>
 			<SocialMediaCard 
 				socialMedia="instagram" 
 				user="@realnathanf" 
-				:numFollowers="11000" 
+				numFollowers="11k" 
 				:numFollowersToday="1099" 
 				:lostFollowers="false"/>
 			<SocialMediaCard 
 				socialMedia="youtube" 
 				user="Nathan F." 
-				:numFollowers="8239" 
+				numFollowers="8239" 
 				:numFollowersToday="144" 
 				:lostFollowers="true"/>
 		
